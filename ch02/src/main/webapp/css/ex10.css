@@ -1,9 +1,7 @@
-body{
+body {
 	padding: 0;
 	margin: 10px;
 	font-size: 12px;
-	font-family: arial, Helvertica, sans-serif;
+	font-family: '맑은 고딕', '돋움', Helvetica,"Apple SD Gothic Neo",sans-serif;
 	color:#333;
-	
-	
 }

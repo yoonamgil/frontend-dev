@@ -4,143 +4,35 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+*	{ margin: 0; padding: 0}
+.header	{ width: 630px; height: 100px; margin: 50px auto 0; }
+.header .logo, .header .search-box	{ float: left; }
+.search-box a, .search-box .btn-search	{ float: right; }
+  
+.header .logo	{ width: 200px; height: 50px; font-size: 0; text-indent:110%; overflow: hidden; background: url('images/sp_search.svg') no-repeat -2px -3px; }
+.header .search-box	{ border:3px solid #03CF5D; width: 400px; height: 45px; margin-left:20px; }  
 
-*{margin:0; padding: 0;}
-.header{
-	width:630px;
-	height:100px;
-	
-	margin:50px auto 0;
-	
-}
+.search-box a, .search-box input, .btn-search button	{ display: block; border: none; }
+.search-box a, .search-box button	{ font-size: 0; text-indent:110%; }
+.search-box input:focus, .search-box button:focus	{ outline: none; }
 
-.header .logo, .header .search-box{
-	float: left;
-	
-}
-
-.header .logo{
-
-	width:200px;
-	height:45px;
-	overflow: hidden;
-	text-indent: 1000px;
-	background: url('images/sp_search.svg') no-repeat -3px -5px ;
-}
-
-.header .search-box{
-	border: 3px solid #19CD61;
-	width: 400px;
-	height: 45px;
-	margin-left:20px;
-	
-}
-
-.search-box a, .search-box input , .search-box button{
-	display:block;
-	float:left;
-	
-	
-}
-
-.search-box input{
-	width:277px;
-	height:45px;
-	outline: none;
-	border: none;
-	margin-left:5px;
-	
-}
-
-.search-box #key{
-	margin-top:18px;
-	background: url('images/sp_search.svg') no-repeat -2px -60px ;
-	text-indent: 1000%;
-	overflow: hidden;
-	font-size:0;
-	width:50px;
-	height:50px;
-}
-
-.search-box #drop{
-	margin-top:22px;
-	margin-left:5px;
-	
-	font-size:0;
-	width:20px;
-	height:50px;
-	background: url('images/sp_search.svg') no-repeat -100px -60px ;
-	text-indent: 1000%;
-	overflow: hidden;
-}
-
-.search-box #drop.focused{
-	margin-top:22px;
-	margin-left:5px;
-	
-	font-size:0;
-	width:20px;
-	height:50px;
-	background: url('images/sp_search.svg') no-repeat -117px -60px ;
-	text-indent: 1000%;
-	overflow: hidden;
-}
-.search-box #k{
-	margin-left:355px;
-	width:45px;
-	height:45px;
-	background-color: #19CD61 ;
-	
-}
-
-.search-box #se{
-	margin-top:3px;
-	margin-left:3px;
-	font-size:0;
-	width:35px;
-	height:35px;
-	background:  #19CD61;
-	text-indent: 1000%;
-	background: url('images/sp_search.svg') #19CD61 no-repeat 5px -51px ;
-	border: none;
-}
-
-
-
-
+.search-box input	{ float: left; width: 290px; padding: 13px 0 13px 5px; font-size: 16px; font-weight: bold; }
+.search-box #keyboard	{ width: 24px; height: 12px; margin: 18px 0 0 0; background: url('images/sp_search.svg') no-repeat -30px -60px; }
+.search-box #dropdown	{ width: 14px; height: 10px; margin: 18px 10px 0 10px; background: url('images/sp_search.svg') no-repeat -136px -58px; }
+.search-box .btn-search	{ width: 45px; height: 45px; background-color: #03CF5D; }
+.search-box .btn-search button	{ width: 26px; height: 30px; margin: 8px auto 0; background: url('images/sp_search.svg') no-repeat 0 -55px; cursor: pointer }
 </style>
-<script type="text/javascript">
-
-function changeBackground(input,className){
-	var i=true;
-
-	if(i==true){
-		input.className=className;
-		i=false;
-	}else{
-		input.idName="drop"
-		i=true;
-	}
-}
-
-
-
-</script>
 </head>
 <body>
 	<div class="header">
-		<h1 class="logo">네이버</h1>
+		<h1 class='logo'>네이버</h1>
 		<div class='search-box'>
-			<input type="text" /> 
-			<a href='' id="key">키보드</a> 
-			<a href="" id="drop" 
-			onFocus='changeBackground(this,"focused");' 
-			onBlur='changeBackground(this,"");'
-			
-			>드롭다운</a>
-			<div id="k">
-				<button id="se">돋보기</button>
+			<input type='text' />
+			<div class="btn-search">
+				<button>돋보기</button>
 			</div>
+			<a href='#' id='dropdown'>드롭다운</a>
+			<a href='#' id='keyboard'>키보드</a>
 		</div>
 	</div>
 </body>

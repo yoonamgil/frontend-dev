@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("button").click(function(){
+		$.ajax({
+			url: 'http://localhost:8088/ch07/data.json',
+			async: true,
+			type: 'get',
+			// contentType: 'application/json'
+			data:'',
+			dataType: 'json',
+			success: function(response){
+				console.log(response.result + ":" + response.data);
+			},
+			error: function(XHR, status, e){
+				console.error(status + ":" + e);
+			}
+		});
+	})
+});
+</script>
+</head>
+<body>
+	<button>JSON가져오기</button>
+	<dl></dl>
+</body>
+</html>

@@ -18,11 +18,11 @@ body {
 	background-color: #FFC;
 }
 .box1 {
-	border: 4px dashed;
+	border: 1px dashed;
 
 }
 .box2 {
-	border:4px dotted;
+	border:1px dotted;
 
 }
 .box3 {
@@ -34,7 +34,7 @@ body {
 
 }
 .box5 {
-	border:4px  inset;
+	border:4px inset;
 
 }
 .box6 {
@@ -48,22 +48,21 @@ body {
 }
 
 .box8 {
-	border: 1px solid;
-	border-width: 1px 2px 3px 4px;
-	border-width: 1px 2px 3px;
-	border-width: 1px 3px;
-	border-width: 1px;
-	
-	border-style: dash dotted solid double;
-	border-color: red blue black gray;
+	/* 12 가지 속성 및 방향의 스타일링을 할 수 있다 */
+	border-left-width:1px;
+	border-right-color: green;
+	border-top-style: double;
 
-	border-left-width: 1px;
-	!border-right-color: green;
-	!border-top-style: double;
+	/* 12 속성별 방향의 단축형*/
+	border-width:1px 2px 3px 4px;
+	border-width:1px 2px 3px;
+	border-width:1px 3px;
+	border-width:1px;
+	border-style:dash dotted solid double;
+	border-color:red blue black gray;
 	
-	
-	
-	
+	/* 보통은 다음과 같은 방식으로 한다. */
+	border: 1px solid #111;
 }
 .box9 {
 	border: 4px none;

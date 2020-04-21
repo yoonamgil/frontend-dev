@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>마진과 패딩</title>
 <style type="text/css">
+*	{ margin:0; padding:0 }
+ 
 body {
 	font-family: "돋움", "맑은 고딕";
 	font-size: 0.8em;
@@ -13,54 +15,32 @@ body {
 .box1 {
 	border:1px solid #666;
 	background-color: #FFC;
-	width:300px; 
-	margin:0 auto;
-	padding: 10px;
+	padding:10px;
+	cursor: default; 
+	width:300px;
 	height: 50px;
-	
-	max-width: 980px;
-	min-width:800px;
-	
-	max-height: 100px;
+	margin:0 auto;
 }
-
 </style>
 <script>
-function f(){
-	console.log("!!!");
-	
-}
-
-
-
 function onDivClicked(el){
-	var marginTop= parseInt(el.style.marginTop);
-	c=0
-	var intervalId = setInterval(function(){
-		if(c<20){
-			marginTop-=10;
-			el.style.marginTop= marginTop + "px";
-			console.log(c + ":" + marginTop);
-			c++;
-			return ;
+	var marginTop = parseInt(el.style.marginTop);
+	var inervalId = setInterval(function(){
+		if(marginTop < -80) {
+			clearInterval(inervalId);
+			return;
 		}
-		clearInterval(intervalId);
+		marginTop -= 10;
+		el.style.marginTop = marginTop + "px";
+		console.log(marginTop);
 		
-	},1000);
+	}, 10);
 }
-
-var add= function(number){
-	return i + 10; 
-}
-
-var i=10; 
-
 </script>
 </head>
-
 <body>
-<div class="box1" style="margin-top:200px" onClick="onDivClicked(this);">
-CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
+<div class="box1" style="margin-top:200px" onclick="onDivClicked(this);">
+	CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 </div>
 
 

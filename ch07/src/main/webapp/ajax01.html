@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("button").click(function(){
+		$("p").load("http://localhost:8088/ch07/data.txt");
+	})	
+});
+</script>
+</head>
+<body>
+	<button>변경</button>
+	<p>변경전</p>
+</body>
+</html>
